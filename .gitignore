@@ -1,0 +1,10 @@
+env/
+data/
+src/__pycache__/
+src/utils/__pycache__/
+logs/
+models/
+weights/
+result/
+result2/
+*.code-workspace
