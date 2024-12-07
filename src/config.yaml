@@ -1,0 +1,2 @@
+model: "../models/cafnet.json"
+weight: "../weights/cafnet.h5"
