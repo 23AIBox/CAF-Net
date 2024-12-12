@@ -1,6 +1,6 @@
 # CAF-Net
 
-a crispr off-target prediction model, that leverage pre-train, synthetic over-sample, and fine-tune, to improve accuracy and recall on train set with imbalanced labels. 
+Cas9 guideRNA off-target prediction model, that leverage pre-train, synthetic over-sample, and fine-tune, to improve accuracy and recall on train set with imbalanced labels. 
 
 
 ## Installation
