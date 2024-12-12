@@ -2,6 +2,31 @@
 
 a crispr off-target prediction model, that leverage pre-train, synthetic over-sample, and fine-tune, to improve accuracy and recall on train set with imbalanced labels. 
 
+
+## Installation
+It's suggested to set up `tensorflow-gpu, python, cudnn, cudatoolkit` for first, due to certain feature of conda's dependency resolution. 
+```
+conda create --prefix=env python=3.x tensorflow-gpu=2.x cudnn cudatoolkit
+conda activate ./env/
+```
+
+## Usage
+
+*Note* Not implemented to run multiple instance simultaneously.
+
+### 1.Validation on dataset with DNA/RNA bulges(indel)
+
+```
+cd src/
+CUDA_VISIBLE_DEVICES=1 DEVICE=GPU:0 python validation1.py
+```
+
+### 2.Validation on dataset with mismatch only
+
+```
+cd src/
+CUDA_VISIBLE_DEVICES=2 DEVICE=GPU:0 python validation2.py
+```
 ## Dataset
 
 the dataset in `data` directory are acquired from
@@ -18,22 +43,3 @@ the dataset in `data` directory are acquired from
 | Dataset II-4| II-4 |GUIDE-Seq|No| Tasi et al., Nat biotech, 2015|
 | Dataset II-5| II-5 |GUIDE-Seq|No| Kleinstiver et al., Nature, 2015|
 | Dataset II-6| II-6 |GUIDE-Seq|No| Listgarten et al., Nat BME, 2018 |
-
-
-## Validation
-
-Do not run multiple instance simultaneously.
-
-### 1.with DNA/RNA bulges(indel)
-
-```
-cd src/
-CUDA_VISIBLE_DEVICES=1 DEVICE=GPU:0 python validation1.py
-```
-
-### 2.mismatch only
-
-```
-cd src/
-CUDA_VISIBLE_DEVICES=2 DEVICE=GPU:0 python validation2.py
-```
